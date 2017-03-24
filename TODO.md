@@ -1,3 +1,5 @@
+#CLICK RAW TO READ THIS
+
 # ADD AN ACTIVE CLASS TO THE HEADER ONLY WHEN THE PAGE IS SCROLLED
   - I've tried this but it didn't work: 
               [JAVASCRIPT]
