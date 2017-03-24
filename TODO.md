@@ -19,4 +19,5 @@
      
                =================
 
-#
+#FIX MOBILE NAVIGATION THAT IS NOT WORKING ON CERTAIN PAGES
+  - Clicking on mobile nav menu doesn't react at all on pages like 4 steps and realtalk finder
