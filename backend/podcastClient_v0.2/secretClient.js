@@ -60,7 +60,7 @@ function createPodcastHTMLView(podRef) {
     var result =
         "<a target=\"_blank\" href=\"" + podRef.podcast.link + "\">" +
         "<div class=\"left podcastContainer my-grey\">" +
-        "<img src=\"soundcloud-icon.png\"></img>" +
+        "<img src=\"assets/img/soundcloud-icon.png\"></img>" +
         "<span class=\"textContainer\">" +
         "<p>Found a discussuion in "+ podRef.podcast.name + " at " + timeString + " about the topic: </p>" +
          "<p>" +  topicString + " lasting for " + duration + " minutes" + "</p>" + 
