@@ -2142,74 +2142,81 @@ $(".site-nav__table").on('click', function () {
 }); 
 
 
-window.onload = navigate
-
-function navigate () {
-  var rawRoute = window.location.hash
-  var hashRoute = rawRoute.slice(rawRoute.indexOf('#') + 2)
-  console.info('load page, navigate to', hashRoute)
-  renderTemplate(hashRoute)
-  activateLinks(hashRoute)
+if (!window.onhashchange) {
+  window.onload = navigate
+  window.onhashchange = navigate
 }
 
-function activateLinks(hashRoute) {
+function navigate (e) {
+  var rawRoute = window.location.hash
+  var hashRoute = rawRoute.slice(rawRoute.indexOf('#') + 2)
+  // if (hashRoute )
+  console.info('load page, navigate to', hashRoute, e.currentTarget.location)
+  renderTemplate(hashRoute)
+  // activateLinks(hashRoute)
+}
+
+/*function activateLinks(hashRoute) {
   $('nav a').css({background: 'initial', cursor: 'initial'});
   $(`nav a[href*="${hashRoute}"]`).css({background: 'green', cursor: 'default'});
 }
-
+*/
 function renderTemplate (route) {
   var $view = $('#view')
   switch (route) {
 
     case 'foursteps':
-    $.get('foursteps.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('foursteps.html', function (data) {
+        $view.html(data)
+      })
+      break
 
     case 'foursteps':
-    $.get('foursteps.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('foursteps.html', function (data) {
+        $view.html(data)
+      })
+      break
+
     case 'existentialdeath':
-    $.get('existentialdeath.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('existentialdeath.html', function (data) {
+        $view.html(data)
+      })
+      break
+
     case 'mostimportantinsight':
-    $.get('mostimportantinsight.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('mostimportantinsight.html', function (data) {
+        $view.html(data)
+      })
+      break
+
     case 'realtalkfinder':
-    $.get('realtalkfinder.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('realtalkfinder.html', function (data) {
+        $view.html(data)
+      })
+      break
+
     case 'selflessness':
-    $.get('selflessness.html', function (data) {
-      $view.html(data)
-    })
-    break
+      $.get('selflessness.html', function (data) {
+        $view.html(data)
+      })
+      break
+
     case 'insights':
-    $.get('insights.html', function (data) {
-      $view.html(data)
-    })
+      $.get('insights.html', function (data) {
+        $view.html(data)
+      })
+      break
 
     case 'home':
-     $.get('home.html', function (data) {
-      $view.html(data)
-    })
+      $.get('home.html', function (data) {
+        $view.html(data)
+      })
+      break
 
-    break
     default:
-    $.get('home.html', function (data) {
-      $view.html(data)
-    })
+      $.get('home.html', function (data) {
+        $view.html(data)
+      })
   }
 }
 
-$(window).bind('hashchange', function () {
- navigate();
-});
