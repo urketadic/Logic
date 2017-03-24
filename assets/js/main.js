@@ -2196,6 +2196,12 @@ function renderTemplate (route) {
     $.get('insights.html', function (data) {
       $view.html(data)
     })
+
+    case 'home':
+     $.get('home.html', function (data) {
+      $view.html(data)
+    })
+
     break
     default:
     $.get('home.html', function (data) {
