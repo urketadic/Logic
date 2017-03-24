@@ -2219,4 +2219,3 @@ function renderTemplate (route) {
       })
   }
 }
-

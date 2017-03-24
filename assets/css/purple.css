@@ -894,7 +894,7 @@ i.media-media {
 
 @media(max-width: 992px) {
   .site-header {
-    background:none;
+    background: none;
   }
 }
 
@@ -3654,12 +3654,12 @@ iframe {
 }
 
 #mostimportantinsightbutton {
-  background-color: #753339;
-  border-color: #753339;
+  background-color: #601C24;
+  border-color: #601C24;
 }
 #mostimportantinsightbutton:hover {
-  background-color:darkred;
-  border-color: darkred;
+  background-color: #76222A;
+  border-color: #76222A;
 }
 /*
 body {
@@ -3827,11 +3827,24 @@ font-size: 0.8em;
   .site-header__icon {
     display: block;
   }
+  .logopicture {
+    margin-top: 15%;
+  }
 }
 
 @media only screen and (max-width: 992px)  {
   iframe {
     display: none;
+  }
+  .homepage_title {
+    margin-top: 0px;
+  }
+
+}
+
+@media only screen and (max-height: 970px) {
+  .whatistheclick {
+    margin-top: 2em;
   }
 }
 
@@ -3871,11 +3884,6 @@ a[title]:hover:after {
 }
 
 
-
-
-
-
-
-
-
-
+.site-header {
+  position: fixed;
+}
