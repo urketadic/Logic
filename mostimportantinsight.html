@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths desktop landscape is-desktop" lang="en" style=""><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A simple click</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">     <!-- bootstrap -->
+  <link rel="stylesheet" href="assets/css/vendor.css">            <!-- plugin -->
+  <link rel="stylesheet" href="assets/css/purple.css" id="theme"> <!-- edit to be red.css, orange.css, pink.css, yellow.css , purple.css, blue.css , brown.css, green.css -->
+  <link rel="stylesheet" href="assets/css/demo.css">              <!-- demo style -->
+  <link rel="stylesheet" href="assets/css/custom.css">            <!-- custom style should place in this file -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/lightbox.min.css">
+  <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script><style id="dark-reader-style" type="text/css"></style>
+  <!--[if lte IE 9]><!-->
+  <script src="assets/js/vendor/html5shiv.min.js"></script>
+  <!--<![endif]-->
+</head>
+
+<body class="is-countdown-on is-site-bg-img is-audio-on is-bg-animation-parallax-on is-overlay-on home-in is-border-on is-site-bg-parallax-star is-site-loader-on is-loaded">
+
+
+<div id="siteBg" class="site-bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+    <div class="site-bg__img"></div>
+    
+    <div class="site-bg__overlay" style="background-color: rgba(0, 0, 0, 0.498039);"></div>
+    <div class="site-bg__effect layer" data-depth="0.3" style="position: relative; display: block; left: 0px; top: 0px; transform-style: preserve-3d; backface-visibility: hidden; opacity: 1; transform: translate3d(39.78px, 19.56px, 0px);"><div class="star velocity-animating" style="transform: translateY(-874.04px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-445.5px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-297.413px) translateZ(0px);"></div></div>
+  </div> <!-- .site-bg -->
+
+  <nav class="site-nav" style="display: none; opacity: 0;">
+    <div class="site-nav__table">
+      <div class="site-nav__cell">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="site-nav__inner" style="transform: translateY(25%) rotateX(-35deg); opacity: 0.4;">
+                <ul class="site-nav__menu">
+                  <li><a href="index.html" class="is-active">Home (Navigation)</a></li>
+                  <li><a href="foursteps.html">Four Steps</a></li>
+                  <li><a href="insights.html">Insight Tree</a></li>
+                  <li><a href="realtalkfinder.html">Realtalk Finder</a></li>
+                  <li><a href="mostimportantinsight.html" id="colorred" class="asd">--> The Most Important Insight<--</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav> <!-- site-nav -->
+
+  <div class="site-wrap ps-container" data-ps-id="af9509e5-1847-f4b2-a8c0-beea567a26fd">
+   <header class="site-header">
+      <div class="container">
+        <div class="site-header__logo">
+        
+          <a class="btn" id="btnreset" href="index.html">
+            <img src="assets/img/site-header-logo.png" alt="logo" class="logopicture">
+          </a>
+         
+
+          <div class="pcnavigation">
+         <a class="btn barnavigation" href="index.html"><span> HOME/NAVIGATION</span> </a>
+         <a class="btn barnavigation" href="foursteps.html"><span> 4 STEPS</span> </a>
+         <a class="btn barnavigation" href="insights.html"><span> INSIGHTS </span> </a>
+         <a class="btn barnavigation" href="realtalkfinder.html"><span> REALTALK FINDER </span> </a>
+         <a class="btn barnavigation" href="mostimportantinsight.html"><span> THE MOST IMPORTANT INSIGHT </span> </a>
+         </div>
+        </div> <!-- .site-header__logo -->
+
+        <ul class="site-header__icon">
+          <li class="site-header__icon__audio">
+             <!--
+            <a href="#">
+              <i class="audio-bar">
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+              </i>
+            </a>
+          -->
+          </li>
+
+          <li class="site-header__icon__nav"><a href="#"><i class="ion-android-menu"></i></a></li>
+        </ul> <!-- .site-header__icon -->
+
+      </div>
+    </header> <!-- .site-header -->
+
+    <main class="site-main">
+
+
+      <div id="service" class="section">
+          <h2 class="center mostimportanttitle mostimportantinsighttitle" id="firsttitle"> The cause of all our suffering </h2>
+          <p>When people are asked what the biggest problem in their life is, most of them often state laziness, procrastination, depression or loneliness (among others). Depending from person to person, the answers may vary from a more selfish to selfless perspective. <br><br>
+          <a href="maze.jpg" data-lightbox="roadtrip" data-title="The cause of all our suffering">
+          <img src="maze.jpg" alt="aureliensmaze" class="aurelien"/>
+          </a>
+          <br><br>
+          But what is the core issue at hand? If we deeply think about it, being lazy or depressed is not the actual problem, for they are merely a symptom. It might sound paradoxical at first but it seems very likely that the core issue of all our problems (and the suffering that they cause) doesn’t rise from the problem itself, but from our obsessive need to value and chase good experiences over everything else. <br>
+          You might wonder: <br>
+          <br>
+          <i>“How can the good experiences be the bad guy in our lives? Aren't they what makes us feel good?”</i> <br>
+          <br>
+          First, it is important to realize that the reason why certain people have a deep feeling of emptiness in their lives is because they have nothing to live for. And, truth be told, society has never taught us what to live for. It has just indoctrinated us with false promisesthat our life will be happy and purposeful if we keep endlessly chasing good experiences. <br><br>
+
+          All we are doing is <b class="color">strengthening the pain in the echo chamber of our feedback loop</b>, where suffering bounces of the walls and gets amplified over and over again until we become depressed or distressed.</p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Valuing experience and addictions</h2>
+          <p>Imagine that we break our hip and we are taken to the hospital, where for the next days we are administrated with several shots of diamorphine to ease the pain (diamorphine is a much stronger type of heroine that no addict can get on a street). Since the drug gives us a very pleasant feeling, it is fair to suppose that there is at least a chance that we would turn into an addict, right? <br><br>
+
+          This has been closely studied and it just doesn’t happen: people don’t become addicts after leaving the hospital. This doesn’t mean they are immune to addiction. It simply means that the addiction to heroine is merely a symptom </b>of a problem that begins with us craving for a better experience.  <br><br>
+          <a href="filter.jpeg" data-lightbox="roadtrip" data-title="Get rid of your addictions">
+          <img src="filter.jpeg" alt="aurelienfilter" class="aurelien" />
+          </a>
+          <br><br>
+          Thus, as long as we have these “good experience” kicks, we value “feeling good” more than anything else and we have nothing else to live for, we will keep reaching out to it. In essence, we are experience junkies. <b class="color">In the same way that someone who is after his next shot of heroine is not happy at all, we are not truly happy either with our need to chase experience all of the time.</b></p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Selfish people can be smart about it</h2>
+          <p>It has been proven in scientific studies about happiness and depression that people are a lot happier when they help others. So, even if we would be the most selfish person on the world, one that only cares about himself, we would be a lot happier and fulfilled if we realized that chasing the purpose of the good experience is what is causing all our misery.
+            <br><br>
+          To put it more simple, even if we only care about ourselves and do everything for selfish reasons, the best thing we can do is to stop chasing the good experience and instead, understand what has been scientifically proven to result.</p>   
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Having something for what to live for</h2>
+          <p>When we truly emotionally realize that feelings of sadness or emptiness are only possible if we value having good experiences, we gain the ability to stop valuing it and come to an acceptance that free us from our suffering. At that point, with a clear mind, we simply do what is right at any given moment and our life gains a new purpose. <br>
+          <br>
+          When someone becomes a father for example, even though he might still have doubts about whether he will be a good father, all the sudden he has a purpose, his self-esteem goes up and his problems are gone. He has something for what to live for.
+          <br><br>
+          This insight also applies in getting a girlfriend. The more we chase them, the more they are repelled. It is only when we stop caring that we become the most attractive. Similarly, in social situations, the more we care about how we come across, the less good of an impression we tend to make. It is the chase that is ruining our intents.</p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">How can we change? The existential death approach</h2>
+          <p>If there is anything that is common to every human being is how hard it is to change. Even if we are fully aware that something is better, we don't want to change. In fact, most people that are depressed or feel miserable are comfortable in being like that.
+            <br><br>
+          Since our whole experience emerges from our neural activity, the reason why we don't want to change has its roots at a neurological level. Neurons just perform their work day in, day out without wondering whether they are benefiting us and if, as a result, they should or should not stop sending neurochemical messages.
+          <br><br>
+          This simple understanding raises an intriguing question: <i>“How do we change if, on a fundamental level, we just don’t want to?”</i>
+          <br><br>
+          Think of it this way. We can easily identify cancer in a body and make the intuitive decision to get rid of it. But when it comes down to what we are, we look at ourselves as one unit and we don’t classify these non-beneficial neurons as parasites that are compromised with some cancerous indoctrinated information. We simply identify them as a part of us and that is why it is so difficult to change.
+          <br>
+          <br>
+          <a href="neuralnetwork.jpg" data-lightbox="roadtrip" data-title="We are product of our neural activity">
+          <img src="neuralnetwork.jpg" alt="neuralnetwork" class="aurelien"/>
+          </a>
+          <br>
+          <br>
+          Being aware of this mechanic, however, allows us to take control. Rather than identifying with these pathways, we can realize that we are being taken advantage of, as these neurons don't care about us at all. <b class="color">On a certain level these neurons must die</b> and this is what going through existential death is.
+          <br><br>
+          If we accept death on an existential level, we will have a much easier time to detach ourselves from our own mental construct of who we are and look at the world for what it is, simply doing what's right. We won't mind leaving our old self behind and, from that point on, there is absolutely nothing that can come at us that we are afraid of changing. We also realize that everything just comes and goes and that we were born within a bigger picture, one in which life itself occupies the central stage and we are merely here to help humanity moving forward.
+          <br><br>
+          <a href="https://www.youtube.com/watch?v=SCTqU9OdF_A#t=" target="_blank">Doing “death meditation” has proven to be essential to get rid of the existential fear most people carry.</a></p>
+
+          <br><br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">After accepting and letting go</h2>
+          <p id="lastparagraphinmostimportantinsight">You might wonder now:
+            <br><br>
+         <i> “After letting go of our experience, what drives us then?” </i>
+          <br><br>
+          Simply doing what we believe is right is enough. At first, it can be simple stuff like taking care of ourselves, working out, eating healthier. Giving is the ultimate way of taking. The moment we stop chasing for better experiences, we realize that giving is what makes us the most fulfilled.
+          <br><br>
+          Furthermore, the beauty of reason and logic is that it gives us a strong direction. Rational thinking allows us to have a bigger and bigger impact, which in return will make us feel better and better. The difference is that we won’t even care so much about the good experience that we get in return because we are giving for the right reasons and not to stimulate an attachment to the good feeling that is creating the prison we live in.</p>
+
+      </div> <!-- #service -->
+
+</main> <!-- .site-main -->
+
+
+
+
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="site-footer__inner">
+              <p class="site-footer__copyright">
+                <a href="https://logicnation.org/Main_Page" target="_blank" id="logicnat"> Logic Wiki </a> <span>-</span> <span> <a href="" id="documentarynat" target="_blank"> Documentary </a></span> <span>-</span>
+                <span> <a href="www.projectnoexcuse.com" id="documentarynat" target="_blank"> Project NX</a></span>
+              </p>
+
+              <ul class="site-footer__social">
+                <li><a href="https://www.twitch.tv/AtheneLive" target="_blank" id="twitch">Livestream</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- .site-footer -->
+  <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+  <!-- /site wrap -->
+
+
+  <!-- script -->
+  <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/vendor/jquery.mobile.custom.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/plugin.js"></script>
+  <script src="assets/js/variable.js"></script>
+  <script src="assets/js/vendor/lightbox.min.js"></script>
+  <script src="backend/podcastClient_v0.2/secretClient.js"></script>
+  <script src="assets/js/main.js"></script>
+  <audio id="audioPlayer" loop=""><source src="assets/audio/audio.mp3" type="audio/mpeg"></audio>
+  <!-- /script -->
+
+
+</body></html>

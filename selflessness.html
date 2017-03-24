@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths desktop landscape is-desktop" lang="en" style=""><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A simple click</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">     <!-- bootstrap -->
+  <link rel="stylesheet" href="assets/css/vendor.css">            <!-- plugin -->
+  <link rel="stylesheet" href="assets/css/purple.css" id="theme"> <!-- edit to be red.css, orange.css, pink.css, yellow.css , purple.css, blue.css , brown.css, green.css -->
+  <link rel="stylesheet" href="assets/css/demo.css">              <!-- demo style -->
+  <link rel="stylesheet" href="assets/css/custom.css">            <!-- custom style should place in this file -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/lightbox.min.css">
+  <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script><style id="dark-reader-style" type="text/css"></style>
+  <!--[if lte IE 9]><!-->
+  <script src="assets/js/vendor/html5shiv.min.js"></script>
+  <!--<![endif]-->
+</head>
+
+<body class="is-countdown-on is-site-bg-img is-audio-on is-bg-animation-parallax-on is-overlay-on home-in is-border-on is-site-bg-parallax-star is-site-loader-on is-loaded">
+
+
+<div id="siteBg" class="site-bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+    <div class="site-bg__img"></div>
+    
+    <div class="site-bg__overlay" style="background-color: rgba(0, 0, 0, 0.498039);"></div>
+    <div class="site-bg__effect layer" data-depth="0.3" style="position: relative; display: block; left: 0px; top: 0px; transform-style: preserve-3d; backface-visibility: hidden; opacity: 1; transform: translate3d(39.78px, 19.56px, 0px);"><div class="star velocity-animating" style="transform: translateY(-874.04px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-445.5px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-297.413px) translateZ(0px);"></div></div>
+  </div> <!-- .site-bg -->
+
+  <nav class="site-nav" style="display: none; opacity: 0;">
+    <div class="site-nav__table">
+      <div class="site-nav__cell">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="site-nav__inner" style="transform: translateY(25%) rotateX(-35deg); opacity: 0.4;">
+                <ul class="site-nav__menu">
+                  <li><a href="index.html" class="is-active">Home (Navigation)</a></li>
+                  <li><a href="foursteps.html">Four Steps</a></li>
+                  <li><a href="insights.html">Insight Tree</a></li>
+                  <li><a href="realtalkfinder.html">Realtalk Finder</a></li>
+                  <li><a href="mostimportantinsight.html" id="colorred" class="asd">--> The Most Important Insight<--</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav> <!-- site-nav -->
+
+  <div class="site-wrap ps-container" data-ps-id="af9509e5-1847-f4b2-a8c0-beea567a26fd">
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__logo">
+        
+          <a class="btn" id="btnreset" href="index.html">
+            <img src="assets/img/site-header-logo.png" alt="logo" class="logopicture">
+          </a>
+         
+
+          <div class="pcnavigation">
+         <a class="btn barnavigation" href="index.html"><span> HOME/NAVIGATION</span> </a>
+         <a class="btn barnavigation" href="foursteps.html"><span> 4 STEPS</span> </a>
+         <a class="btn barnavigation" href="insights.html"><span> INSIGHTS </span> </a>
+         <a class="btn barnavigation" href="realtalkfinder.html"><span> REALTALK FINDER </span> </a>
+         <a class="btn barnavigation" href="mostimportantinsight.html"><span> THE MOST IMPORTANT INSIGHT </span> </a>
+         </div>
+        </div> <!-- .site-header__logo -->
+
+        <ul class="site-header__icon">
+          <li class="site-header__icon__audio">
+             <!--
+            <a href="#">
+              <i class="audio-bar">
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+              </i>
+            </a>
+          -->
+          </li>
+
+          <li class="site-header__icon__nav"><a href="#"><i class="ion-android-menu"></i></a></li>
+        </ul> <!-- .site-header__icon -->
+
+      </div>
+    </header> <!-- .site-header -->
+
+    <main class="site-main">
+
+
+<div id="selflessnesspage" class="section">
+          <h2 class="center mostimportanttitle mostimportantinsighttitle" id="firsttitle"> Inaction is the culprit </h2>
+          <p>Let’s start with a setting and a simple example:<br><br>
+          Imagine we are at home and a child is trapped in our basement. We can hear the child, we know he is starving and we also know that we can set him free (and save him) by unlocking the door. Would it be considered murder if we decide not to do it? <br>
+          <br>
+          It naturally would. <br><br>
+
+          This is important to understand. The reason why people see it as murder is because the action we must take to save a life is so small that the knowledge that the child is trapped does not justify our inaction. We can go even further and state that the extent to which we consciously define whether we are responsible for the death is the extent to which we have to go outside of our comfort zone to save that child.
+          <br><br>
+          Regardless of the situation, inaction from someone that is aware of the “death” outcome is commonly classified as murder. In the same way that not opening the basement door would fit in the above premise, our inaction in the real world is likely to lead to a very similar conclusion.
+          <br>
+          <a href="https://logicnation.org/Videos">You can find more examples of the suffering in the world on this page.</a>
+          </p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Where does the inaction comes from?</h2>
+          <p>It can be quite sad to realize the reasons behind why we keep doing harm to each other. Some of us even wonder (when we watch, for example, World War II documentaries) why no one did anything to stop the genocide. Yet, the inaction that caused all those deaths is the same that most people share today.<br><br>
+
+          And the reason for that is quite simple:<br><br>
+          People don’t value consistency or logic. They value their experience more than anything.
+          <br><br>
+          Even though we might know what and how to do the right thing, we prefer instead to keep valuing our experience. Funnily enough, most of all human-suffering is caused by this attachment. We feel bad about something, and as we wonder why we feel bad, we enhance it to a point that is detrimental to the experience itself.
+          <br><br>
+          Watching videos where we are confronted with the world’s daily reality immediately puts all our problems into context. Sadness, loneliness or anger are nothing compared to the misery that afflicts the world. Moreover, even if we commit to helping other people, we still have a great life. Back in the days, doing the right thing could get us killed. Nowadays, however, we can have an impact in the world without having to put our safety at risk.</p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">We have a responsibility towards the world</h2>
+          <p>Consider the following situation:
+            <br><br>
+          If a mother lets her child die from starvation, who killed the child: the mother or the circumstances? 
+          Most people would say that the mother should have taken care of the child. 
+          <br><br>
+          But why is that so? What is the mother-son or father-son (or daughter) relationship? It is simply a constructed belief. For ages, there have been societies where the community takes care of everyone. Even today, our own safety is mostly guaranteed by the system in place (or the government) and not by our parents.
+          <br><br>
+          Some people might say: “But I'm already doing the right thing!”
+          <br><br>
+          Well, someone that values experience only does the right thing to the extent that it feels good. If the intentions are not pure, we are not really doing the right thing. <br>
+          As an example, if we donate a little bit of money to get rid of our guilt, we shouldn’t frame it as “doing the right thing”. It might have some positive impact, but doing the right thing begins by first realizing that even though we value our experience, we can take distance from it and by then accepting what we are and the responsibility that comes with it. <br> <br>
+          Life is not about us. In fact, it is about something much bigger than us. That's how we change the world, by using logic and consistency in order to define what the right thing is.
+          </p> 
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Everyone knows what is the right thing to do</h2>
+          <p>Everyone with no exception knows what is, emotionally, the right thing to do. Everybody knows it! We also know that there's an emotional drive, deep within us, to do the right thing. We might not always know “how” but that is not the actual problem, for logic and consistency provides all the knowledge we need.<br>
+          <br>
+          In fact, the problem lies within the question: <i>“Why should I care more about doing what is right than about my own experience?”</i>
+          <br><br>
+          When we ask “why”, we are not asking for a logical reason, because we already know that it makes sense. The bottom line is that if, on a fundamental level, we don't care about the world, then everything that we experience, including all the misery and suffering, is going to eventually hit at our door. After all, if we don't care about the world, why should the world care about us?</p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">Life is about something bigger than us</h2>
+          <p>If we really boil it down to the essence, clicking is merely valuing doing what is right rather than valuing our own experience. The best way to understand this insight is by realizing that not only can we do something to improve the world (and the idea that we can’t is a blatant lie) but we also have the responsibility to do it.
+            <br><br>
+          This insight lays down a map on how to get our life together in a way that contributes to a bigger picture, one that is much more important than us. We weren't born just for the sake of experiencing a nice, comfortable life. We were born within a bigger picture, to evolve humanity and move forward (just like a cell in our body). Even our inner drive to help others arises from the fact that we are all interconnected. And when we realize how unfair it is for others that have it worse, we deeply realize that we can and should do something about it.
+          <br><br>
+          At the end of the day, the only thing that is in between doing the right thing and not doing the right thing is the fact that most people value their experience more than anything else. 
+          <br><br>
+          If we reflect on how flawed and selfish it is, we would certainly realize that the impact we can have in real lives and the change we can bring to real problems would drastically increase our ability to make a difference. That's how we would bring a better world for our children, for the children of our children and maybe even for ourselves.
+           </p>
+
+          <br>
+          <br>
+
+           <h2 class="center mostimportanttitle mostimportantinsighttitle">The mother of all excuses</h2>
+          <p>There is still one excuse that beats any other: the excuse that we are doing enough.
+            <br><br>
+          But even when we take responsibility for our actions, if we are truly honest with ourselves, we quickly realize that we can always do better. Enough is not enough. The question then becomes "How can I do better?" instead of "Can I do better?" This is the difference between a visionary and someone who ends up achieving nothing. This is how someone grows and has a huge impact. Deep within, we know this but we settle with "I just can't" and use it as an excuse.
+          </p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">What is the click</h2>
+          <p>On a fundamental level, the click is simply the understanding that we can trust way more in logic than in anything else. It gives us a much better framework to be aligned with reality and because there is no discrepancy between our actions and further consequences, we will rarely experience any inner conflict. We can fully trust and fall back on logic.
+            <br><br>
+          This is something that everyone knows. However, because we were being "punished" as we grew up, we started making excuses to cope with the discrepancy with reality. As a result, we became a "conditioned excuses machine" rotting our mindset and our life.
+          <br><br>
+          As an example, when a father gets angry at his kid, the kid doesn't blame his father but himself. We, as a child, always think it is his our own fault. But as we grow older, we create an ability to project and we start using the system (or even others) as an excuse.
+          <br><br>
+          On the other hand, when we base ourselves on logic and reality, we look at the situation and think of how we can fix it. We never point fingers. When we do, we are merely coming up with an excuse to deflect our responsibility. Sadly, this is the major cause of all human-caused suffering.
+          </p>
+
+          <br>
+          <br>
+
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">It is always our own responsibility</h2>
+          <p>Control can be defined as the extent to which our actions have influence over the consequences.
+            <br><br>
+         When there is a problem and we argue that it is the government or someone else's responsibility to fix it, we do it to obtain control over the situation. We basically try to gain control by giving it to other people. But this is totally flawed. We let go of our ability to make a choice ourselves and we instead rely on our environment (and the intersubjectivity) to decide for us.
+          <br><br>
+          Instead, we should always fall back on logic and reality itself. By doing that, we can't even point fingers to others. We can't say that it is their responsibility. We are the ones that are responsible, always having our understanding of reality as the foundation and the extent to which we can have an impact as the direction. This is literally the only thing that matters and everything else is an excuse.
+          <br><br>
+          Moreover, when logic and reality are the only things that create our framework, we don't have to justify ourselves to anyone. We only justify ourselves towards ourselves, reality and the consequences of our actions.
+          <br><br>
+          Understanding and trusting the patterns in reality is what give us control and the ability to make accurate predictions. On a fundamental level, it is also what brings a sense of safety and self-reliance to our lives.
+          <br><br>
+          It can be a very powerful realization that life is about taking responsibility and anything that stops us from accepting that is just an excuse. It is only by learning from the (sometimes) unexpected consequences of our actions that we become more knowledgeable and better prepared to recognize the patterns. That is what life is. We can only get better at it.
+          </p>
+
+          <br>
+          <br>
+          
+
+       
+          <h2 class="center mostimportanttitle mostimportantinsighttitle">It is about being honest with ourselves</h2>
+          <p>When we are fully honest with ourselves, we understand the consequences of our actions and we don't make any excuses. None. When we do that, only reality is left. We act merely based on our understanding of the consequences and we automatically start doing what is right. This is what "choiceless awareness" really is. And the only thing disconnecting us from it is the number of excuses that we make.
+          <br><br>
+          For example, when we have a child and we have to take care of it, we just do it. The same applies if we need to sleep or eat. We don't make excuses because, on a fundamental level, we understand the relation between the action and its consequences.
+          <br><br>
+          And everyone understands this. We understand that being responsible is making sure that our actions in life don't go against life itself. It all boils down to honesty and we can literally start now. We don't have to lie anymore. If we stop giving yourself excuses to stop eating healthy, we just start eating healthy. That's it. There is not even an effort. The effort is only in overcoming your excuses. When we realize this, all duality and conflict in our minds fade away.</p>
+
+      </div> <!-- #portfolio-->
+
+</main> <!-- .site-main -->
+
+
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="site-footer__inner">
+              <p class="site-footer__copyright">
+                <a href="https://logicnation.org/Main_Page" target="_blank" id="logicnat"> Logic Wiki </a> <span>-</span> <span> <a href="" id="documentarynat" target="_blank"> Documentary </a></span> <span>-</span>
+                <span> <a href="www.projectnoexcuse.com" id="documentarynat" target="_blank"> Project NX</a></span>
+              </p>
+
+              <ul class="site-footer__social">
+                <li><a href="https://www.twitch.tv/AtheneLive" target="_blank" id="twitch">Livestream</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- .site-footer -->
+  <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+  <!-- /site wrap -->
+
+
+  <!-- script -->
+  <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/vendor/jquery.mobile.custom.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/plugin.js"></script>
+  <script src="assets/js/variable.js"></script>
+  <script src="assets/js/vendor/lightbox.min.js"></script>
+  <script src="backend/podcastClient_v0.2/secretClient.js"></script>
+  <script src="assets/js/main.js"></script>
+  <audio id="audioPlayer" loop=""><source src="assets/audio/audio.mp3" type="audio/mpeg"></audio>
+  <!-- /script -->
+
+
+</body></html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths desktop landscape is-desktop" lang="en" style=""><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>A simple click</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">     <!-- bootstrap -->
+  <link rel="stylesheet" href="assets/css/vendor.css">            <!-- plugin -->
+  <link rel="stylesheet" href="assets/css/purple.css" id="theme"> <!-- edit to be red.css, orange.css, pink.css, yellow.css , purple.css, blue.css , brown.css, green.css -->
+  <link rel="stylesheet" href="assets/css/demo.css">              <!-- demo style -->
+  <link rel="stylesheet" href="assets/css/custom.css">            <!-- custom style should place in this file -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/lightbox.min.css">
+  <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script><style id="dark-reader-style" type="text/css"></style>
+  <!--[if lte IE 9]><!-->
+  <script src="assets/js/vendor/html5shiv.min.js"></script>
+  <!--<![endif]-->
+</head>
+
+<body class="is-countdown-on is-site-bg-img is-audio-on is-bg-animation-parallax-on is-overlay-on home-in is-border-on is-site-bg-parallax-star is-site-loader-on is-loaded">
+
+
+  <div class="site-loader" style="opacity: 0; display: none;">
+    <span></span>
+    <p>Loading...</p>
+  </div> <!-- .site-loader -->
+
+
+  <div id="siteBg" class="site-bg" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+    <div class="site-bg__img"></div>
+    
+    <div class="site-bg__overlay" style="background-color: rgba(0, 0, 0, 0.498039);"></div>
+    <div class="site-bg__effect layer" data-depth="0.3" style="position: relative; display: block; left: 0px; top: 0px; transform-style: preserve-3d; backface-visibility: hidden; opacity: 1; transform: translate3d(39.78px, 19.56px, 0px);"><div class="star velocity-animating" style="transform: translateY(-874.04px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-445.5px) translateZ(0px);"></div><div class="star velocity-animating" style="transform: translateY(-297.413px) translateZ(0px);"></div></div>
+  </div> <!-- .site-bg -->
+
+  <nav class="site-nav" style="display: none; opacity: 0;">
+    <div class="site-nav__table">
+      <div class="site-nav__cell">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="site-nav__inner" style="transform: translateY(25%) rotateX(-35deg); opacity: 0.4;">
+                <ul class="site-nav__menu">
+                  <li><a href="index.html" class="is-active">Home (Navigation)</a></li>
+                  <li><a href="foursteps.html">Four Steps</a></li>
+                  <li><a href="insights.html">Insight Tree</a></li>
+                  <li><a href="realtalkfinder.html">Realtalk Finder</a></li>
+                  <li><a href="mostimportantinsight.html" id="colorred" class="asd">--> The Most Important Insight<--</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav> <!-- site-nav -->
+
+  <div class="site-wrap ps-container" data-ps-id="af9509e5-1847-f4b2-a8c0-beea567a26fd">
+    <header class="site-header">
+      <div class="container">
+        <div class="site-header__logo">
+        
+          <a class="btn" id="btnreset" href="index.html">
+            <img src="assets/img/site-header-logo.png" alt="logo" class="logopicture">
+          </a>
+         
+
+          <div class="pcnavigation">
+         <a class="btn barnavigation" href="index.html"><span> HOME/NAVIGATION</span> </a>
+         <a class="btn barnavigation" href="foursteps.html"><span> 4 STEPS</span> </a>
+         <a class="btn barnavigation" href="insights.html"><span> INSIGHTS </span> </a>
+         <a class="btn barnavigation" href="realtalkfinder.html"><span> REALTALK FINDER </span> </a>
+         <a class="btn barnavigation" href="mostimportantinsight.html"><span> THE MOST IMPORTANT INSIGHT </span> </a>
+         </div>
+        </div> <!-- .site-header__logo -->
+
+        <ul class="site-header__icon">
+          <li class="site-header__icon__audio">
+             <!--
+            <a href="#">
+              <i class="audio-bar">
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+                <span class="audio-bar__item"></span>
+              </i>
+            </a>
+          -->
+          </li>
+
+          <li class="site-header__icon__nav"><a href="#"><i class="ion-android-menu"></i></a></li>
+        </ul> <!-- .site-header__icon -->
+
+      </div>
+    </header> <!-- .site-header -->
+
+    <main class="site-main">
+
+      <div id="home" class="cd-horizontal-timeline section">
+        <h3 class="leavinghumanity" data-animation-in="fadeInRight" data-animation-in-delay="300" data-animation-out="fadeOutLeft" data-animation-out-delay="600"> How to Click </h3>
+          <div class="timeline" data-animation-in="fadeInRight" data-animation-in-delay="300" data-animation-out="fadeOutLeft" data-animation-out-delay="600">
+    <div class="events-wrapper">
+      <div class="events">
+        <ol>
+          <li><a href="#0" data-date="16/01/2014" class="selected">Step 1</a></li>
+          <li><a href="#0" data-date="28/02/2014">Step 2</a></li>
+          <li><a href="#0" data-date="20/04/2014">Step 3</a></li>
+          <li><a href="#0" data-date="20/05/2014">Step 4</a></li>
+          <li><a href="#0" data-date="09/07/2014">Did I click?</a></li>
+          <li><a href="insights.html" data-date="30/08/2014">Insights Tree</a></li>
+        </ol>
+
+        <span class="filling-line" aria-hidden="true"></span>
+      </div> <!-- .events -->
+    </div> <!-- .events-wrapper -->
+      
+    <ul class="cd-timeline-navigation">
+      <li><a href="#0" class="prev inactive">Prev</a></li>
+      <li><a href="#0" class="next">Next</a></li>
+    </ul> <!-- .cd-timeline-navigation -->
+  </div> <!-- .timeline -->
+
+  <div class="events-content" data-animation-in="fadeInRight" data-animation-in-delay="300" data-animation-out="fadeOutLeft" data-animation-out-delay="600">
+    <ol>
+      <li class="selected" data-date="16/01/2014">
+        <h2 class="color">Step One</h2>
+        <br>
+        <h3>Build trust in logic</h3>
+        <p class="justify"> 
+        <br>
+          Logic is the consistent patterns that bring about our reality. Anytime we refer to reality, the organism,
+          consistency or life, we are referring to logic. Since <b class="color"> logic is the patterns that govern everything. </b
+          ><br>
+          Our concsious experience of the world is what allows us to observe and study the consistent patterns (such as gravity).
+          <br>
+          Scientists believe that it is likely that throughout evolution, life started generating an emergent property of experience, also referred to as a feedback loop. This feedback loop is the mechanism in which the input and output through our senses translates in a conscious experience. This means that if the experience would have never been generated by logical patterns, we wouldn’t exist.
+          </p>
+          <br>
+          <a href="stepone.jpg" data-lightbox="roadtrip" data-title="Logic patterns are all around us">
+          <img src="stepone.jpg" alt="stepone" class="aurelien2"/>
+          </a>
+          <br>
+          <h3> Doing The Right Thing</h3>
+          <br>
+          <p class="justify">
+          When we were young, most of us wanted to be a super-hero or to change the world. Deep within, we had an emotional drive to do the right thing. Even today, everyone with no exception knows what is, emotionally, the right thing to do. Projecting to the younger version of ourselves allows us to revive and strengthen this emotional attachment towards doing the right thing while logic and science provide a realistic and more mature framework to define those actions. <br> <br> <br>
+
+          <h3> Reality is probabilistic</h3>
+          <br>
+          <p class="justify">Furthermore, it is fascinating to acknowledge how the consistency that we experience is fundamentally probabilistic. On an emotional level, you might connect consistency with determinism but having a simple grasp of Quantum Mechanics can help making this concept more intuitive. </p>  <br> <br>
+
+          <h3> Guided Meditation </h3>
+         <audio controls="controls" src="assets/meditations/guided1.mp3">
+        </audio>
+
+
+          <br>
+          <br>
+          <h4>Associated content for this step:<h4>
+          <p class="color2 center"><a href="https://logicnation.org/Why_thinking_in_probabilities_is_essential_when_adopting_logic" class="color"><b>1) probabilities insight </b></a> <a href=" https://logicnation.org/Content_to_help_you_appreciate_logic" class="color">2) content to help you appreciate logic </a></p>
+          </p>
+          </p>
+           <br>
+           <br>
+           <a class="btn nextbtn">
+                        Continue to the next step
+           </a>
+         
+          
+
+         </li>
+
+
+
+
+      <li data-date="28/02/2014" id="steptwo">
+        <h2 class="color" id="topofpage">Step Two</h2>
+         <br>
+        <h3>Find the core emotion associated with your existential need of inner balance</h3>
+        <p class="justify"> 
+        <br>
+          The reason why we want to feel comfortable and safe in our lives boils down to our craving for <b class="color">existential balance</b>. Existential balance is the consistency that we are driven to achieve within our own experience. Although most people associate this consistency to their identity or to believing in a soul, none of them are consistent within existence, which ultimately makes the drive to reach this equilibrium to go against its own balance. </p>
+
+          <br>
+          <a href="steptwo.jpg" data-lightbox="roadtrip" data-title="Reflect on your actions and find what core value is driving you in life">
+          <img src="steptwo.jpg" alt="steptwo" class="aurelien2"/>
+          </a>
+          <br>
+
+          <p class="justify"> Finding this <b class="color"> core emotion </b> is essential. To achieve that, you need to be truly honest while questioning the reasons behind why you did what you did in your life. You basically need to pinpoint the existential need of inner balance that you are craving for, the one that gives meaning and purpose to your experience. <br><br>
+          Furthermore, it is very likely that your inner child is only holding on to a core value – such as comfort, family, social validation or even God –, to fulfill this need of existential balance. He is clinging to the idea that having experience as your true reason to live is a good thing.
+          Your inner child just needs to realize how, for all this time, the drive for comfort and identity was a drive for consistency instead. And that this consistency is much better achieved when seeing our <b class="color">experience for what it is (a tool)</b>, while at the same time holding on to the consistent patterns that bring about reality (which is to say having logic as the goal).
+
+          
+          <br>
+          <br>
+
+          <h3> Our craving for good experiences </h3>
+          <br>
+          <p class="justify">
+          As we grew up, <b class="color">society has indoctrinated us</b> with false promises that our life will be happy and purposeful if we keep endlessly chasing good experiences. Bit by bit, our drive to do the right thing got lost and what remained was an emotional attachment to our experience. In this step, it is important to realize how, on a fundamental level, what drives all your actions is a craving for good experiences. <br> <br>  </p>
+
+
+          <h3> Guided Meditation </h3>
+         <audio controls="controls" src="assets/meditations/guided2.mp3">
+        </audio>
+
+        <br>
+        <a class="btn nextbtn">
+                        Continue to the next step
+           </a>
+
+         </li>
+
+
+
+
+
+      <li data-date="20/04/2014">
+      <h2 class="color">Step Three</h2>
+         <br>
+        <h3>Complete a paradigm shift in which you realize logic as a goal is meaningful</h3>
+        <p class="justify"> 
+        <br>
+          The consistent patterns that emerge in order to bring life have evolved in such a way that the consistency (or logic) is perceived as the tool and experience itself as the goal. This creates a <b class="color">feedback loop of identity </b> and fictional stories that are often the cause of a lot of suffering. <br>
+          As you can already realize, it is close to impossible to achieve existential balance and feel complete if you keep trying to find purpose and meaning in your experience. <b class="color"> The purpose of experience is merely to serve as a tool for life to evolve more optimally </b>. Experience is the tool, life is the goal.. <br>
+          This should bring a really big relief as you understand that it is not about you anymore. In the same way that a mother experiences a selfless feeling towards her child, you will find the same meaning and connection once you submit yourself to something much greater than you: life and logic itself.
+          </p>
+
+          <br>
+          <br>
+
+          <h3> Einstein </h3>
+          <br>
+          <p class="justify"> People that we define as heroes (such as Einstein, for example) were actually the ones that realized, on a fundamental level, that life wasn’t about them. They used their experience as a tool and logic as a goal to <b class="color"> bring humanity forward. </b><br>
+          <b class="color">Visualization is very useful to set an emotional stage.</b> You should try to visualize how your experience (the essence of what you are) is merely a tool and seeing it as a goal will always be detrimental for your well-being, causing a lot of inner conflict. On the other end, you should also try to visualize how having logic as the goal instead of as a tool <b class="color"> will allow you to easily achieve anything you want</b>, including the balance you were looking for and the previous core value that you were trying to fulfill.  </p>
+          <a href="einstein.jpg" data-lightbox="roadtrip" data-title="Carl Sagan and Einstein are one of many who had this mindset">
+          <img src="einstein.jpg" alt="einstein" class="aurelien2"/>
+          </a>
+          <br>
+          
+          <br>
+
+          <h3> Yo-Yo Technique </h3>
+          <p class="justify"> Going back and forth between the positive and negative emotions (holding longer to the negative ones) has proved to be an effective way to complete the paradigm shift. This is known as the <b class="color">“Yo-yo technique”</b>. When you realize this on an emotional level, you will go through a paradigm shift in which you submit yourself to the probabilistic consistency that brought about you and reality. As soon as you do that, logic automatically starts being desired from the core and you feel finally complete. <br>
+          Plus, when you align with your real purpose, every neural circuit will start resonating with each other, granting you not only the existential balance that you have always been looking for but also true fulfillment, inner peace and a <b class="color">constant state of happiness</b>.
+          </p>
+
+          <br>
+          <br>
+
+          <h3> The cause of all suffering </h3>
+          <p class="justify">At this point, it seems clear that <b class="color">chasing the good experiences is what causes all our misery and suffering</b>. We have nothing to live for, and that is even the reason why most of us value what other people think, why we feel worthless or why we dwell in inaction. On a fundamental level, we think that our meaning of life is to feel good but the moment we find real purpose, we go through a catharsis in which we suddenly feel liberated and reach a state of true fulfillment.  
+          <br>
+          To achieve it, a lot of people found it useful to, on one end, visualize their attachment to the good experiences (or even comfort) as being very damaging to their own lives and, on the other end, to their innocent and pure inner child was right when he simply wanted to do the right thing - to do good. As stated before, going back and forth between the positive and negative emotions (holding longer to the negative ones) has proved to be an effective way to complete the paradigm shift. This is known as the <b class="color">“Yo-yo technique”</b>.
+          </p>
+         
+         <br> 
+         <a href="stepthree.jpg" data-lightbox="roadtrip" data-title="Connect a negative emotion to your curent core value">
+         <img src="stepthree.jpg" alt="stepthree" class="aurelien2" id="fat"/>
+         </a>
+         <br>
+
+          <h3> Guided Meditation </h3>
+          <audio controls="controls" src="assets/meditations/guided3.mp3">
+          </audio>
+          <br>
+          <a class="btn nextbtn">
+                        Continue to the next step
+           </a>
+
+      </li>
+
+
+
+      <li data-date="20/05/2014">
+        <h2 class="color">Step Four</h2>
+         <br>
+        <h3>Follow a few guidelines to make sure you selflessly clicked</h3>
+        <p class="justify"> 
+        <br>
+          Once you click, you gain the awareness that your experience only emerged as a tool for life. Thus, it is not about you anymore but about thriving beyond measure by helping life itself, using logic as your guide to stay consistent with reality. Furthermore, you should not only keep doing the right thing using logic as your guide but also be very aware whether you are doing it to feel good or because you are sure it is the right thing to do (with your current knowledge). <br>
+          Even though this paradigm shift automatically expands your awareness, your intuition will value logic more than the awareness arising from it, because you will logically realize that the awareness wouldn't exist without logic itself.
+          </p>
+
+          <br>
+          <br>
+
+          <h3> Keep making logical decisions </h3>
+          <p class="justify"> Your immediate reaction will often be a strong urge to <b class="color">understand everything through logic</b>. This is highly connected with the <b class="color">reward center</b> of the brain, so the first action you should take is to <b class="color">logically restructure your belief system</b>. 
+          </p>
+          <br>
+          <a href="stepthree.jpg" data-lightbox="roadtrip" data-title="Neuroplasticity">
+          <img src="stepfour.jpg" alt="neurons" class="aurelien2"/>
+          </a>
+          <br>
+
+          <h3> Correctly frame your decisions, emotions and thoughts with probabilistic thinking </h3>
+          <br>
+          <p class="justify">
+          Even when you adopt logic as your core value, you can still have flawed ideas and behave in illogical ways. Thinking that everything is deterministic rather than probabilistic is one of those ideas.
+          <br>
+          The way our brain works is very simple. When we think, you connect an emotion to the thought. We generally store information in a binary way (“good” or “bad”, for example) but we should instead also include the statistical probability that we might be flawed, ignorant or not completely sure. Thus, even though our emotion is quite binary, the thought isn’t.
+          <br>
+          Then, if one of your logical ideas fails, your inner child just accepts that there was a chance and keeps the trust. <b class="color"> This is a fundamental understanding of logic</b>. If you don't have this mechanic in your brain and you don't store information in a probabilistic way, you are bound to unclick.
+          </p>
+          <br>
+          <br>
+          <h3> Be result-oriented instead of outcome dependant </h3>
+          <p class="justify">
+            Being result-oriented is important as it allows you to measure your efficiency. But as with everything in life, most of the time it comes down to random events. You can make the most calculated decisions and things can still turn out for the worse, and vice versa. You can play the lottery for example and win, thinking you did the right thing. But being outcome-dependent is a very different mindset than being result-oriented. Ultimately, the <b class="color">outcome shouldn’t matter and the only relevant factors are the knowledge at that point in time combined with our logic</b>.
+
+            We can learn things from an outcome such as how to optimize our workflow but it shouldn’t affect us emotionally. When reflecting and looking back at your decisions, you shouldn’t regret them if you did the best you could with the information available to you at that time. Being result-oriented rather than outcome-dependent allows you to achieve a very peaceful state of mind as it contributes tremendously towards <b class="color"> mental stability and focus</b>.
+
+            Evaluating your beliefs at all times is quite important as well. New research is being published all the time and there is no shame in improving your belief system to align it more with reality. 
+
+          </p>
+
+          </br>
+          </br>
+
+          <h3> Be aware of "identity death" </h3>
+          <br>
+          <p class="justify">
+            Once you truly understand that the reason why you were holding on to identity was because you were emotionally driven to find existential balance, your identity will likely automatically vanish.
+
+            Still, you should keep yourself in check and be honest whether that is the case or not.
+          </p>
+          <br>
+          <a class="btn nextbtn">
+                        Continue to "Did I Click?"
+           </a>
+      </li>
+
+
+      <li data-date="09/07/2014">
+        <h2 class="color">Did I click?</h2>
+
+        <h5>As soon as you make the click, you will experience: </h5>
+
+          <p class="justify">a rush of dopamine in your brain;</p>
+          <p class="justify">an euphoric feeling;</p>
+          <p class="justify">a tremendous relief.</p> <br><br>
+          <h5>Later on, as long you follow step four, you will experience most of the following side-effects:</h5>
+          <br>
+          <p class="justify">You will feel clear-headed, in the present and in a constant state of flow;</p>
+          <p class="justify">You will feel driven to think logically and understand things; </p>
+         <p class="justify"> You will experience selfless and choiceless awareness;</p>
+          <p class="justify">You will stop taking things for granted and you will find everything that surrounds you beautiful;</p> 
+          <p class="justify">You will feel intrinsic confidence and a sense of empowerment; </p>
+          <p class="justify">You will appreciate reality for what it is, which will allow you to truly listen and understand the world from other people’s perspective;</p>
+         <p class="justify"> All your problems will be gone instantly as you start thinking in solutions rather than problems; </p>
+          <p class="justify">Your logic abilities skyrocket such as quicker pattern recognition and learning capabilities; </p>
+         <p class="justify"> You will feel no burden, story or identity as duality ends and you won't need to think in 1st or 3rd person anymore;
+          <p class="justify">You will develop an urge to tell other people;</p>
+          <p class="justify">You will experience a diminished urge to eat, since you don't feel as much of a need to reward yourself with it;</p>
+          <p class="justify">Your social anxiety or depression will gradually fade away, which will naturally improve your ability to find a partner; </p>
+          <p class="justify">You will be able to overcome addictions with ease, including a lack of desire to take drugs anymore as you achieved the state you were using them for.</p>
+<br><br>
+
+
+        <em>If you doubt the ligitimacy of your click, answering the following questions with a 'yes' means that you clicked.</em> <br>
+        <h3>1) Do you have a strong emotional desire to understand everything logically?</h3>
+        <br>
+        <h3>2) Do logical actions flow naturally or does it require discipline or motivation?</h3>
+        <br>
+        <h3>3) Do you experience a lot of dissonance when you act illogically or when <br>you have contradictory thoughts or emotions?</h3>
+        <br>
+        <a class="btn nextbtn">
+                        Continue to "What Now?"
+         </a>
+      </li>
+
+      <li data-date="30/08/2014">
+        <h2 class="color">Insights Tree</h2>
+        <em>Helpful insights</em>
+        <p class="justify"> 
+          <p class="center">Knowledge from the <a href="www.logicnation.com/insights.html">Insights section</a> can be extremely helpful even if you had not made the click.</p>
+        </p>
+      </li>
+
+    </ol>
+  </div> <!-- .events-content -->
+
+      </div> <!-- #home -->
+
+    </main> <!-- .site-main -->
+
+   <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="site-footer__inner">
+              <p class="site-footer__copyright">
+                <a href="https://logicnation.org/Main_Page" target="_blank" id="logicnat"> Logic Wiki </a> <span>-</span> <span> <a href="" id="documentarynat" target="_blank"> Documentary </a></span> <span>-</span>
+                <span> <a href="www.projectnoexcuse.com" id="documentarynat" target="_blank"> Project NX</a></span>
+              </p>
+
+              <ul class="site-footer__social">
+                <li><a href="https://www.twitch.tv/AtheneLive" target="_blank" id="twitch">Livestream</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> <!-- .site-footer -->
+  <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></div>
+  <!-- /site wrap -->
+
+
+  <!-- script -->
+  <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/vendor/jquery.mobile.custom.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/plugin.js"></script>
+  <script src="assets/js/variable.js"></script>
+  <script src="assets/js/vendor/lightbox.min.js"></script>
+  <script src="backend/podcastClient_v0.2/secretClient.js"></script>
+  <script src="assets/js/main.js"></script>
+  <audio id="audioPlayer" loop=""><source src="assets/audio/audio.mp3" type="audio/mpeg"></audio>
+  <!-- /script -->
+
+
+</body></html>
