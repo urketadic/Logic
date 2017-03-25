@@ -2069,7 +2069,7 @@ $(".navigationbutton").on('click', function() {
   $("#backbutton").hide();
 });
 
-$("#backbutton").on('click', function () {
+$(".backbutton").on('click', function () {
   $("#container").show();
   $(".branch").hide();
   $("#backbutton").hide();
@@ -2136,7 +2136,6 @@ $("#backbutton").show();
     }
   }
 
-
 $(".site-nav__table").on('click', function () {
  fn_siteNavAnimation()
 }); 
@@ -2148,6 +2147,7 @@ if (!window.onhashchange) {
 }
 
 function navigate (e) {
+  document.getElementById('logopicture').scrollIntoView(); 
   var rawRoute = window.location.hash
   var hashRoute = rawRoute.slice(rawRoute.indexOf('#') + 2)
   // if (hashRoute )
