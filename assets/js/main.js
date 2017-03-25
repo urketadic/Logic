@@ -2147,6 +2147,7 @@ if (!window.onhashchange) {
 }
 
 function navigate (e) {
+  document.getElementById('logopicture').scrollIntoView(); 
   var rawRoute = window.location.hash
   var hashRoute = rawRoute.slice(rawRoute.indexOf('#') + 2)
   // if (hashRoute )
