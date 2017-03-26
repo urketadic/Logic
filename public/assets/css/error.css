@@ -1,0 +1,21 @@
+.red {
+    color:#753339;
+}
+#view {
+   position: absolute;
+  margin: auto;
+  top: 35%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#view h2 {
+
+    font-size: 3.5em;
+}
+@media screen and (max-width: 750px) {
+    #view h2 {
+        font-size:6vw;
+    }
+}
