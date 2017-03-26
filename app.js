@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const exphbs = require('express-handlebars')
+const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 
 const routes = require('./routes/index');
@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
 
 
 module.exports = app;

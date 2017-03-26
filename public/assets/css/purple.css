@@ -3607,6 +3607,11 @@ iframe {
   width: 50%;
   font-size: 1.1em;
 }
+@media screen and (max-width:700px) {
+  #service {
+    width:80%;
+  }  
+}
 
 #contact {
   margin: 0px auto;
@@ -3658,6 +3663,10 @@ iframe {
   opacity: 0.7;
   filter: brightness(70%);
 }
+
+@media screen and (max-width:700px) {
+   .aurelien{width: 100%};
+}
 #fat {
   width: 25%;
 }
@@ -3687,7 +3696,7 @@ body:active {
 
 
 .navigationbutton {
-  width: 15em;#
+  width: 15em;
   font-size: 1.0em;
 }
 
@@ -3743,9 +3752,9 @@ body:active {
    position: relative;
    width:99%;
    margin: 0.3vw 0.3vw 0.3vw 0.6vw;
-   height:4.5em;
+   height:5em;
    box-shadow: 0 1px 3px rgba(0,0,0,1), 0 1px 2px rgba(0,0,0,0.24);
-   overflow:visible;
+   overflow:hidden;
 }
 
 .podcastContainer:hover {
@@ -3753,7 +3762,7 @@ body:active {
 }
 
 .podcastContainer img { 
-    height:4.5em;
+    height:5em;
     vertical-align: middle;
 }
 .podcastContainer p{
@@ -3766,31 +3775,27 @@ font-size: 0.8em;
   vertical-align: middle;
 }
  .textContainer p {
-  font-size: 0.9em;
-  line-height: 0.5em;
-}
-
-@media only screen and (min-width: 800px) {
-.podcastContainer {width:49%}
-@media only screen and (min-width: 400px) {
-.podcastContainer {height:5em;}
-.podcastContainer img { height:5em; }
-}
-
- .podcastContainer p {
   font-size: 0.8em;
+  line-height: 0.2em;
 }
+@media only screen and (max-width: 600px) {
+ .podcastContainer p{font-size:2.0vw}
+}
+
+@media only screen and (max-width: 400px) {
+.podcastContainer {height:4.5em;}
+.podcastContainer img { height:4.5em; }
+}
+
 
 #podRefs p {
-  text-align: center;
+  text-align:left;
 }
 
-}
 
-
-@media only screen and (max-width: 959px) {
+@media only screen and (min-width: 980px) {
   .podcastContainer {
-    width: 100%;
+    width: 49%;
   }
 }
 

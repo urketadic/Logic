@@ -1,4 +1,4 @@
-var basePath = "http://10.10.10.162:8080/api/search";
+var basePath = "http://10.10.10.162:3000/api/search";
 const MAX_TOPICSTRING_LENGTH = 90;
 
 $(document).ready(function () {
@@ -63,7 +63,7 @@ function createPodcastHTMLView(podRef) {
         "<img src=\"assets/img/soundcloud-icon.png\"></img>" +
         "<span class=\"textContainer\">" +
         "<p>Found a discussuion in "+ podRef.podcast.name + " at " + timeString + " about the topic: </p>" +
-         "<p>" +  topicString + " lasting for " + duration + " minutes" + "</p>" + 
+         "<p>" +  topicString + 
         "</div></a>";
     return result;
 }
