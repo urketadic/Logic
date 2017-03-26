@@ -1,4 +1,4 @@
-var basePath = "http://10.10.10.162:3000/api/search";
+var basePath = "http://localhost:3000/api/search";
 const MAX_TOPICSTRING_LENGTH = 90;
 
 $(document).ready(function () {
