@@ -1,4 +1,4 @@
-var basePath = "http://logicnation.herokuapp.com/api/search";
+var basePath = "https://logicnation.herokuapp.com/api/search";
 const MAX_TOPICSTRING_LENGTH = 90;
 
 $(document).ready(function () {
