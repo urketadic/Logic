@@ -1,4 +1,4 @@
-var basePath = "http://localhost:3000/api/search";
+var basePath = "http://logicnation.herokuapp.com/api/search";
 const MAX_TOPICSTRING_LENGTH = 90;
 
 $(document).ready(function () {
