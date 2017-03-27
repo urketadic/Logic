@@ -1639,7 +1639,6 @@ var $ = jQuery.noConflict();
 
 
 
-
 // 4 steps page
 var timelines = $('.cd-horizontal-timeline'),
     eventsMinDistance = 60;

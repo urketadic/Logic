@@ -69,7 +69,7 @@ var _site_bg_overlay_color =                      'rgba(0, 0, 0, 0.5)';
 // 13 = youtube video (video audio)
 // 14 = youtube video  + mp3
 //
-var _bg_style_desktop =                           4;
+var _bg_style_desktop =                           3;
 
 // ============================================ //
 // MOBILE/TABLE VARIANT                         //
@@ -87,14 +87,14 @@ var _bg_style_desktop =                           4;
 // 7 = slideshow + kenburn
 // 8 = slideshow + kenburn + mp3
 //
-var _bg_style_mobile =                            4;
+var _bg_style_mobile =                            3;
 
 // ============================================ //
 // Slideshow                                    //
 // ============================================ //
 
 // number - slideshow image amount
-var _bg_slideshow_image_amount =                  2;
+var _bg_slideshow_image_amount =                  0;
 
 // millisecond - slideshow duration
 var _bg_slideshow_duration =                      9000;
@@ -131,13 +131,13 @@ var _bg_video_youtube_loop =                      true;
 // 5 = snow
 // 6 = particles
 //
-var _bg_effect =                                  2;
+var _bg_effect =                                 2;
 
 // true, false - enable parallax effect on above aniamtion, its force disable on mobile, and not work with outdated browser
 var _bg_animation_parallax =                      true;
 
 // number - bg animation parallax depth
-var _bg_animation_parallax_depth =                0.30;
+var _bg_animation_parallax_depth =                0.10;
 
 // ============================================ //
 // Cloud setting                                //
@@ -151,14 +151,14 @@ var _cloud_opacity =                              0.2;
 // ============================================ //
 
 // 0.1 to 1 - parallax star opacity
-var _parallax_star_opacity =                      0.1;
+var _parallax_star_opacity =                      1;
 
 // ============================================ //
 // Star setting                                 //
 // ============================================ //
 
 // 0.1 to 1 - star opacity
-var _star_opacity =                               0.54;
+var _star_opacity =                               1;
 
 // none, top, top-right, right, bottom-right, bottom, bottom-left, left, top-left - star direction
 var _star_direction =                             'top-right';

@@ -8,4 +8,4 @@ const server = http.createServer(app);
 
 server.listen(port);
 
-console.log('Server started, view on http://localhost:' + port);
+console.log('Server started');
