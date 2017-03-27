@@ -1,6 +1,7 @@
 
 var
     fuzzySet = require('./fuzzyset.js'),
+    fs = require('fs'),
     podRefs = [],
     podRefsById = new Object(),
     topics = [],
@@ -14,6 +15,7 @@ const
     //Time in milliseconds after cached request gets removed.
     MAX_REQUEST_AGE = 10000,
     CACHE_UPDATE_INTERVAL = 5000;
+
 
 
 function cacheRequest(searchTerm, podRefs) {
@@ -39,24 +41,28 @@ function entryIsOutdated(time, entry) {
 }
 
 function initialize() {
-    loadPodcastReferences();
-   
-    setTimeout(() => {    
-        podRefs.forEach(podRef => delete podRef.text);               
-        categorizePodRefs();
-        setTopics();
-    }
-
-        , 1000);
+    loadPodcastReferences();                
+    categorizePodRefs();
+    setTopics();
+ 
     setInterval(updateCache, CACHE_UPDATE_INTERVAL);
 }
 
 
 function loadPodcastReferences() {
+     podRefs = JSON.parse(fs.readFileSync('podcastReferences.json', 'utf8'));
+     podRefs.forEach((podRef) => podRef._id = podRef._id["$oid"]);
+     var copy = podRefs.slice(); 
+     for (var i = 0; i < copy.length; i++) {
+        podRefsById[copy[i]._id] = copy[i];
+     }
+     
+  
+    /*
     var MongoClient = require('mongodb').MongoClient
         , assert = require('assert');
     // Connection URL to mongoDB
-    var databaseUrl = 'mongodb://127.0.0.1:27017/PodcastDB';
+    var databaseUrl = 'mongodb://10.10.10.162:27017/PodcastDB';
     MongoClient.connect(databaseUrl, function (err, db) {
         assert.equal(null, err);
         var collection = db.collection("PodcastReferences");
@@ -72,7 +78,8 @@ function loadPodcastReferences() {
             }
             db.close();
         })
-    });
+    }); */
+    
 }
 function addPodRefDuration(arr){
     arr = arr.sort((a, b) => {

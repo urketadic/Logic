@@ -56,7 +56,7 @@ function createPodcastHTMLView(podRef) {
         topicString = topicString.slice(0,MAX_TOPICSTRING_LENGTH - 6) + "...'";
     } */
     var timeString = shortenTimeString(podRef.time);
-    var duration = shortenTimeString(podRef.duration);
+ //   var duration = shortenTimeString(podRef.duration);
     var result =
         "<a target=\"_blank\" href=\"" + podRef.podcast.link + "\">" +
         "<div class=\"left podcastContainer my-grey\">" +
