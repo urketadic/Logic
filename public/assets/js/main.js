@@ -2155,10 +2155,9 @@ $(".site-nav__table").on('click', function () {
 $(window).bind('hashchange', function () {
 if(window.location.hash.indexOf('modal') === 1) {
   var hashIndex = window.location.href.indexOf('#'); 
-  var stringBeforeHash = window.location.href.slice(hashIndex).slice(1);
+  var stringBeforeHash = window.location.href.slice(hashIndex);
   console.log(stringBeforeHash); 
-
-
+  var aelement = $('a[href=' + stringBeforeHash + ']').children()[0];
+  aelement.click();
 }
-
 });
