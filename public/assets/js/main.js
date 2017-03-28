@@ -72,8 +72,6 @@ var $ = jQuery.noConflict();
     id = '#' + $('.section').filter('.is-active').attr('id');
     $('[data-link="' + id + '"]').addClass('is-active');
 
-    // scrollbar init
-    fn_scrollbar();
 
     if ($html.hasClass('cssanimations')) {
       $(id).find('[data-animation-in]').each(function() {
@@ -333,7 +331,6 @@ var $ = jQuery.noConflict();
 
 
               setTimeout(function() {
-                fn_scrollbar();
                 fn_animationIn();
               }, 0);
             }
@@ -411,21 +408,6 @@ var $ = jQuery.noConflict();
         $this.removeClass(animationIn).removeClass(animationOut).removeAttr('style', 'animation-delay');
       }
     });
-  }
-
-//
-// scrollbar
-// --------------------------------------------------
-//
-
-  function fn_scrollbar() {
-    var $scrollBlock = $('.site-wrap');
-
-    if (!isMobile) {
-      $scrollBlock.perfectScrollbar({
-        suppressScrollX: true
-      });
-    }
   }
 
 //
@@ -1918,8 +1900,22 @@ var timelines = $('.cd-horizontal-timeline'),
   }
 
 
+function removeHash () { 
+    var scrollV, scrollH, loc = window.location;
+    if ("pushState" in history)
+        history.pushState("", document.title, loc.pathname + loc.search);
+    else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
 
+        loc.hash = "";
 
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
+}
 
 
 //Modal
@@ -1963,6 +1959,7 @@ var Modal = {
     // set event, save globally to remove when needed
     window.modalCloseClickEvent = function() {
         Modal.closeEvent(btnClose);
+        removeHash();
       }
       // bind click event to toggle
     btnClose.addEventListener('click', modalCloseClickEvent);
@@ -1972,6 +1969,9 @@ var Modal = {
       if (e.keyCode === 27) {
         Modal.closeModal(modal);
         Modal.setOpenEventBindings(btnClose);
+        if(window.location.hash.indexOf('modal') === 1) {
+          removeHash();
+        }
       }
     }
   },
@@ -2046,6 +2046,7 @@ Modal.init();
 
 $(".modal").click(function() {
     $(this).removeClass(Modal.classVisible);
+    removeHash();
 });
 $(".modal__content").click(function(e) {
      e.stopPropagation(); // This is the preferred method.
@@ -2140,3 +2141,24 @@ $(".site-nav__table").on('click', function () {
 }); 
 
 
+  //URL on modals
+  $(window).bind('hashchange', function () {
+    // check if url contains 'gallery'
+    if (window.location.hash.indexOf('modal') === -1 || location.hash == null) {
+      // url doesnt contains 'gallery', so we will close the gallery modal
+      console.info('close modal')
+      $(".modal").removeClass(Modal.classVisible);
+    }
+  });
+
+// Trying to toggle the modal depending on url
+$(window).bind('hashchange', function () {
+if(window.location.hash.indexOf('modal') === 1) {
+  var hashIndex = window.location.href.indexOf('#'); 
+  var stringBeforeHash = window.location.href.slice(hashIndex).slice(1);
+  console.log(stringBeforeHash); 
+
+
+}
+
+});
