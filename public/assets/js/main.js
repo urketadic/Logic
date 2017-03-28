@@ -2151,13 +2151,24 @@ $(".site-nav__table").on('click', function () {
     }
   });
 
-// Trying to toggle the modal depending on url
-$(window).bind('hashchange', function () {
-if(window.location.hash.indexOf('modal') === 1) {
+
+function openModal() {
+	if(window.location.hash.indexOf('modal') === 1 && window.location.pathname === "/insights") {
   var hashIndex = window.location.href.indexOf('#'); 
   var stringBeforeHash = window.location.href.slice(hashIndex);
   console.log(stringBeforeHash); 
   var aelement = $('a[href=' + stringBeforeHash + ']').children()[0];
-  aelement.click();
+  	console.log("run");
+  	aelement.click();
 }
+}
+
+
+// Trying to toggle the modal depending on url
+
+$(document).ready(function() {
+openModal();
+
+$(window).on('hashchange', openModal);
+
 });

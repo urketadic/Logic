@@ -185,7 +185,7 @@ var _snow_speed =                                 0.5;
 var _particles_opacity =                          0.75;
 
 // 0.1 to 1 - particles speed
-var _particles_speed =                            6;
+var _particles_speed =                            8;
 
 // 0.1 to 1 - particles line opacity
 var _particles_line_opacity =                     0.55;
