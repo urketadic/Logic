@@ -22,7 +22,7 @@ var _countdown_utc =                              false;
 
 // true, false - enable / disable section change loader animation
 // disable section loader is not working for each image @ section variant
-var _section_change_loader =                      false;
+var _section_change_loader =                      true;
 
 // ============================================ //
 // Border - header bottom and footer top        //
