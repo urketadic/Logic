@@ -1,17 +1,22 @@
 window.onpopstate = changeSelectedElement;
 $(document).ready(changeSelectedElement);
-
+$(document).keyup(function(e) {
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if(code === 37 || code === 39){ //left arrow, right arrow 
+        onSingleShift(e);
+    }
+});
 
 function changeSelectedElement() {
     var urlAry = window.location.href.split("#");
     if (urlAry.length > 1) {
         var hash = urlAry[1];
         var timeLineElements = $('.events li a');
-        var foundElement = timeLineElements.filter(function () {
+        var foundElements = timeLineElements.filter(function () {
             return $(this).text() === hash;
         });
-        if (foundElement && !foundElement.hasClass("selected")) {
-            foundElement.click();
+        if (foundElements.length > 0 && !foundElements.hasClass("selected")) {
+            foundElements.first().click();
         }
     } else {
         window.location.hash = "Step 1";
