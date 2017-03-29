@@ -25,16 +25,16 @@ function onTimeLineChange(event) {
 
 }
 function onSingleShift(event) {
+    var oldHash = window.location.hash;
     setTimeout(function () {
-        var newHash = window.location.hash;
         $('.events li a').each(function () {
             var currentElement = $(this);
 
-            if (currentElement.hasClass("selected")) {
+            if (currentElement.hasClass("selected") && oldHash !== '#'+currentElement.text()) {
                 window.history.pushState({}, "TestTitle", "#" + currentElement.text());
             }
         });
-    }, 300);
+    }, 100);
 }
 
 
