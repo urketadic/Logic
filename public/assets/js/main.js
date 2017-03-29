@@ -2146,7 +2146,6 @@ $(".site-nav__table").on('click', function () {
     // check if url contains 'gallery'
     if (window.location.hash.indexOf('modal') === -1 || location.hash == null) {
       // url doesnt contains 'gallery', so we will close the gallery modal
-      console.info('close modal')
       $(".modal").removeClass(Modal.classVisible);
     }
   });
