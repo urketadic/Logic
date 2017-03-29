@@ -4018,3 +4018,15 @@ ul.tree {
 .openmodal {
   color: white !important;
 }
+
+/* Happiness content */
+div#modalhappiness {
+  background-image: url('../img/modals/happinessbg.png');
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+}
+#happinesstitle {
+  display:block;
+  margin:0px auto;
+  width: 40%;
+}
