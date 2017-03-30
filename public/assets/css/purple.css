@@ -4022,11 +4022,89 @@ ul.tree {
 /* Happiness content */
 div#modalhappiness {
   background-image: url('../img/modals/happinessbg.png');
+  background-position: center center
   font-family: 'EB Garamond', serif;
-  font-weight: 500;
+  font-weight: 400;
+  color: black;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+ font-size: 1em;
 }
 #happinesstitle {
   display:block;
   margin:0px auto;
   width: 40%;
+}
+
+#happinessfirstp {
+    float: left;
+    clear: both;
+    width: 35em;
+    margin-left: 12%;
+    margin-top: 5em;
+    margin-bottom: 4em;
+}
+
+#happinesssecondp {
+    float: left;
+    clear: both;
+    width: 35em;
+    margin-left: 22%;
+    margin-bottom: 2em;
+}
+
+#happinessbrain {
+  position: absolute;
+  right: 0%;
+  top:3%;
+  width:25%;
+}
+
+#happinessthirdp {
+  float:left;
+  margin-left:12%;
+  clear:both;
+  width:35em;
+  margin-top: 2em;
+}
+
+#happinessfourthp {
+  margin-top:4em;
+  clear:both;
+  float:right;
+  width: 30em;
+  margin-right: 12%;
+  margin-bottom: 2em;
+}
+
+#happinessfifthp {
+  clear:both;
+  float:right;
+  width: 30em;
+  margin-right: 12%;
+}
+#happinessdonkey {
+  clear:both;
+}
+
+#happinesssixthp {
+  float: left;
+  margin-left: 12%;
+  width: 45em;
+  margin-top:6em;
+  margin-bottom: 4em;
+}
+
+#happinessseventhp {
+  clear:both;
+  margin-left:50%;
+  transform:translateX(-50%);
+  width: 35em;
+  margin-bottom: 2em;
 }
