@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const podcastSearch = require("../podcastSearch.js");
+const getPodcastReferences = require('../podcasts.js');
 
 
 router.get('/', function(req, res) {
@@ -30,13 +30,14 @@ router.get('/selflessness', function(req, res) {
 router.get('/mostimportantinsight', function(req, res) {
     res.render('mostimportantinsight');
 });
-
-//Podcast search backend.
-router.get("/api/search",podcastSearch.searchPodcasts);
+router.get('/api/podcastreferences',function(req, res) {
+    res.json(getPodcastReferences());
+}); 
 
 router.get('/*', function(req, res) {
     res.render('error');
 });
+
 
 
 

@@ -4020,8 +4020,8 @@ ul.tree {
 }
 
 /* Happiness content */
-div#modalhappiness {
-  background-image: url('../img/modals/happinessbg.png');
+#modalhappiness {
+  background: url('../img/modals/happinessbg.png');
   font-family: 'EB Garamond', serif;
   font-weight: 500;
 }
@@ -4029,4 +4029,12 @@ div#modalhappiness {
   display:block;
   margin:0px auto;
   width: 40%;
+}
+.table-header {
+  cursor:pointer;
+}
+@media screen and (max-width:465px) {
+.table {
+  font-size:0.8rem;
+}
 }
