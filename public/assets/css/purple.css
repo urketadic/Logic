@@ -4133,4 +4133,27 @@ div#modalhappiness {
   font-size:0.8rem;
 }
 }
+#searchContainer {
+  width:80%;
+  margin:0px auto;
+}
+#searchInput {
+  margin-right:10px;
+  width:85%
+}
+
+@media screen and (max-width:700px) {
+  #searchContainer {
+    width:100%
+  }
+  #searchInput {
+  width:97%;
+  margin:1%
+}
+#resetButton {
+  width:97%;
+   margin:1%
+}
+}
+
 
