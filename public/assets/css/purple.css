@@ -4133,13 +4133,15 @@ div#modalhappiness {
   font-size:0.8rem;
 }
 }
-#searchContainer {
-  width:80%;
-  margin:0px auto;
+#searchContainer{
+  width:70%;
+  margin:auto;
+  text-align: center
 }
 #searchInput {
   margin-right:10px;
-  width:85%
+  margin-left:10px;
+  width:30%
 }
 #resetButton {
   color: #94ba33;
@@ -4148,7 +4150,7 @@ div#modalhappiness {
 }
 
 @media screen and (max-width:700px) {
-  #searchContainer {
+  #searchContainer{
     width:100%
   }
   #searchInput {
