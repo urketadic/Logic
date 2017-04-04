@@ -4141,6 +4141,11 @@ div#modalhappiness {
   margin-right:10px;
   width:85%
 }
+#resetButton {
+  color: #94ba33;
+  background-color: #232222;
+  border-color: #989898;
+}
 
 @media screen and (max-width:700px) {
   #searchContainer {
@@ -4151,6 +4156,7 @@ div#modalhappiness {
   margin:1%
 }
 #resetButton {
+  
   width:97%;
    margin:1%
 }
