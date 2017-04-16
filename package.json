@@ -26,6 +26,11 @@
     "express-handlebars": "^3.0.0",
     "fuzzyset": "0.0.4",
     "hbs": "^4.0.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.4",
+    "webpack": "^2.1.0-beta.22"
   }
 }
